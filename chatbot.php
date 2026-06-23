@@ -70,7 +70,7 @@ $page_title = "Chat — League Mentor AI";
 
         <!-- Typing indicator -->
         <div id="typing-row" class="msg-row typing-indicator" style="padding: 0 1.5rem 0; background: rgba(8,17,32,.7); border-left: 1px solid var(--border-gold); border-right: 1px solid var(--border-gold);">
-            <div class="msg-avatar bot-av"><img src="images/bot-avatar.png" alt="League Mentor AI"></div>
+            <div class="msg-avatar bot-av"><img src="images/TeemoProfile.jpg" alt="League Mentor AI"></div>
             <div>
                 <div class="bubble bubble-bot">
                     <div class="typing-dots">

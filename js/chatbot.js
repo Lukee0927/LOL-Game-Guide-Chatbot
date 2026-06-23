@@ -33,7 +33,7 @@ function appendMessage(text, isUser) {
     avatarEl.className = 'msg-avatar ' + (isUser ? 'user-av' : 'bot-av');
 
     const avatarImg = document.createElement('img');
-    avatarImg.src = isUser ? 'images/user-avatar.png' : 'images/bot-avatar.png';
+    avatarImg.src = isUser ? 'images/TeemoProfile.jpg' : 'images/RyzeProfile.jpg';
     avatarImg.alt = isUser ? 'You' : 'League Mentor AI';
     avatarEl.appendChild(avatarImg);
 
