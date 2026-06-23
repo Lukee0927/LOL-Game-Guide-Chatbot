@@ -16,7 +16,6 @@ $page_title = "Guides — League Mentor AI";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="css/guides.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -24,7 +23,7 @@ $page_title = "Guides — League Mentor AI";
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="index.php">⚔ League<span>Mentor</span> AI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navMenu">
@@ -32,7 +31,6 @@ $page_title = "Guides — League Mentor AI";
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link active" href="guides.php">Guides</a></li>
                 <li class="nav-item"><a class="nav-link" href="chatbot.php">Chat</a></li>
-                <li class="nav-item"><a class="nav-link" href="admin.php">Admin</a></li>
             </ul>
         </div>
     </div>
@@ -69,6 +67,31 @@ $page_title = "Guides — League Mentor AI";
                         <a class="sidebar-link" href="#vision"><span class="icon">👁️</span> Vision Control</a>
                         <a class="sidebar-link" href="#teamfight"><span class="icon">⚔</span> Team Fighting</a>
                         <a class="sidebar-link" href="#ranked"><span class="icon">🏆</span> Ranked Tips</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile ToC dropdown -->
+            <div class="col-12 d-lg-none">
+                <div class="mobile-toc">
+                    <button class="mobile-toc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileToc">
+                        📚 Jump to Section <i class="bi bi-chevron-down ms-1"></i>
+                    </button>
+                    <div class="collapse" id="mobileToc">
+                        <div class="mobile-toc-links">
+                            <a href="#top-lane">🛡️ Top Lane</a>
+                            <a href="#jungle">🌲 Jungle</a>
+                            <a href="#mid-lane">⚡ Mid Lane</a>
+                            <a href="#adc">🏹 ADC</a>
+                            <a href="#support">💙 Support</a>
+                            <a href="#objectives">🐉 Objectives</a>
+                            <a href="#items">⚔️ Items</a>
+                            <a href="#runes">✨ Runes</a>
+                            <a href="#farming">🌾 Farming & CS</a>
+                            <a href="#vision">👁️ Vision Control</a>
+                            <a href="#teamfight">⚔ Team Fighting</a>
+                            <a href="#ranked">🏆 Ranked Tips</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -324,14 +347,54 @@ $page_title = "Guides — League Mentor AI";
 <!-- ── Footer ── -->
 <footer>
     <div class="container">
+        <div class="footer-nav-links">
+            <a href="index.php">Home</a>
+            <a href="guides.php">Guides</a>
+            <a href="chatbot.php">Chat</a>
+            <a href="credits.php">Credits</a>
+        </div>
         <div class="footer-bottom">
             <span>⚔</span> League Mentor AI — Academic Project &nbsp;|&nbsp; Not affiliated with Riot Games &nbsp;<span>⚔</span>
         </div>
     </div>
 </footer>
 
+<!-- ── FLOATING CHATBOT BUTTON ────────────────────────────── -->
+<div id="float-chat-btn" class="float-chat-btn" title="Ask the Mentor">
+    <i class="bi bi-chat-dots-fill"></i>
+    <span class="float-chat-label">Ask AI</span>
+</div>
+
+<!-- ── FLOATING CHATBOT PANEL ─────────────────────────────── -->
+<div id="float-chat-panel" class="float-chat-panel">
+    <div class="float-chat-header">
+        <div class="float-chat-title">⚔ League Mentor AI</div>
+        <div class="float-chat-actions">
+            <a href="chatbot.php" class="float-expand-btn" title="Open full chat">
+                <i class="bi bi-arrows-fullscreen"></i>
+            </a>
+            <button id="float-chat-close" class="float-close-btn" title="Close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+    </div>
+    <div id="float-messages" class="float-messages">
+        <div class="float-welcome">
+            <p>👋 Hi Summoner! Ask me anything about LoL while you read the guide.</p>
+        </div>
+    </div>
+    <div id="float-typing" class="float-typing" style="display:none;">
+        <span></span><span></span><span></span>
+    </div>
+    <div class="float-input-bar">
+        <input type="text" id="float-input" placeholder="Ask a question…" maxlength="300" autocomplete="off">
+        <button id="float-send-btn"><i class="bi bi-send-fill"></i></button>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/guides.js"></script>
+<script src="js/float-chat.js"></script>
 
 </body>
 </html>

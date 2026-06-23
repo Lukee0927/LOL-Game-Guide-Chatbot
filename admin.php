@@ -165,7 +165,7 @@ $pageTitle = 'Admin Panel — League Mentor AI';
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="guides.php">Guides</a></li>
                 <li class="nav-item"><a class="nav-link" href="chatbot.php">Chat</a></li>
-                <li class="nav-item"><a class="nav-link active" href="admin.php">Admin</a></li>
+                
             </ul>
         </div>
     </div>
@@ -419,10 +419,15 @@ $pageTitle = 'Admin Panel — League Mentor AI';
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer class="lm-footer">
     <div class="container">
+        <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem 1.2rem;margin-bottom:.5rem;">
+            <a href="index.php" style="font-family:var(--font-display);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;">Home</a>
+            <a href="guides.php" style="font-family:var(--font-display);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;">Guides</a>
+            <a href="chatbot.php" style="font-family:var(--font-display);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;">Chat</a>
+            <a href="credits.php" style="font-family:var(--font-display);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;">Credits</a>
+        </div>
         <p>
             &copy; <?= date('Y') ?> League Mentor AI &nbsp;|&nbsp;
-            DIT 2-7 Web Development Final Project &nbsp;|&nbsp;
-            <a href="index.php">Back to Site</a>
+            DIT 2-7 Web Development Final Project
         </p>
     </div>
 </footer>

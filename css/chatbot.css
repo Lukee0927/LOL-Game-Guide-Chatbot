@@ -464,3 +464,39 @@
             .bubble { max-width: 88%; font-size: .85rem; }
             .suggested-prompts { display: none; }
         }
+        /* ── FOOTER LINKS ────────────────────────────────────── */
+        .lm-footer .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: .4rem 1.2rem;
+            margin-bottom: .5rem;
+        }
+        .lm-footer .footer-links a {
+            font-family: var(--font-display);
+            font-size: .65rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color .2s;
+        }
+        .lm-footer .footer-links a:hover { color: var(--gold); }
+
+        /* ── MOBILE IMPROVEMENTS ─────────────────────────────── */
+        @media (max-width: 576px) {
+            .chat-container { padding: .5rem .35rem; }
+            .chat-header { padding: .75rem 1rem; gap: .6rem; }
+            .chat-header-info .name { font-size: .82rem; }
+            .chat-header-info .status-text { font-size: .68rem; }
+            .btn-clear { font-size: .58rem; padding: .28rem .6rem; }
+            .bubble { max-width: 90%; font-size: .84rem; padding: .75rem .9rem; }
+            #user-input { font-size: .84rem; padding: .6rem .8rem; }
+            #send-btn { width: 42px; height: 42px; }
+            .suggested-prompts { padding: .6rem 1rem; }
+            .prompt-chip { font-size: .6rem; padding: .25rem .6rem; }
+        }
+        @media (max-width: 380px) {
+            .chat-header-actions { gap: .3rem; }
+            .avatar-orb { width: 38px; height: 38px; }
+        }

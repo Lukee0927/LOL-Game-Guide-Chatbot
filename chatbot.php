@@ -21,7 +21,7 @@ $page_title = "Chat — League Mentor AI";
 <nav class="navbar navbar-expand-lg lm-nav">
     <div class="container">
         <a class="navbar-brand" href="index.php">⚔ League<span>Mentor</span> AI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navMenu">
@@ -29,7 +29,6 @@ $page_title = "Chat — League Mentor AI";
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="guides.php">Guides</a></li>
                 <li class="nav-item"><a class="nav-link active" href="chatbot.php">Chat</a></li>
-                <li class="nav-item"><a class="nav-link" href="admin.php">Admin</a></li>
             </ul>
         </div>
     </div>
@@ -65,13 +64,13 @@ $page_title = "Chat — League Mentor AI";
                 <div class="w-icon">⚔</div>
                 <h5>Welcome, Summoner!</h5>
                 <div class="welcome-divider"></div>
-                <p>I'm your personal League of Legends coach. Ask me about champion roles, items, runes, ranked tips, objectives, or anything else to improve your gameplay.</p>
+                <p>Your personal LoL coach is ready. Ask about champions, items, runes, ranked tips, or any game mechanic.</p>
             </div>
         </div>
 
-        <!-- Typing indicator (inside messages, but visually separate) -->
+        <!-- Typing indicator -->
         <div id="typing-row" class="msg-row typing-indicator" style="padding: 0 1.5rem 0; background: rgba(8,17,32,.7); border-left: 1px solid var(--border-gold); border-right: 1px solid var(--border-gold);">
-            <div class="msg-avatar bot-av"><img src="images/RyzeProfile.jpg" alt="League Mentor AI"></div>
+            <div class="msg-avatar bot-av"><img src="images/bot-avatar.png" alt="League Mentor AI"></div>
             <div>
                 <div class="bubble bubble-bot">
                     <div class="typing-dots">
@@ -85,19 +84,19 @@ $page_title = "Chat — League Mentor AI";
         <div class="suggested-prompts" id="suggested-prompts">
             <button class="prompt-chip" data-prompt="What is the ADC role?">What is ADC?</button>
             <button class="prompt-chip" data-prompt="How do I improve my CS?">Improve CS</button>
-            <button class="prompt-chip" data-prompt="Tell me about Dragon">Dragon objective</button>
+            <button class="prompt-chip" data-prompt="Tell me about Dragon">Dragon</button>
             <button class="prompt-chip" data-prompt="What are the best runes for ADC?">ADC Runes</button>
             <button class="prompt-chip" data-prompt="How do I climb in ranked?">Climb Ranked</button>
             <button class="prompt-chip" data-prompt="What is wave management?">Wave Mgmt</button>
-            <button class="prompt-chip" data-prompt="Tell me about Baron Nashor">Baron Nashor</button>
-            <button class="prompt-chip" data-prompt="What is vision control?">Vision Control</button>
+            <button class="prompt-chip" data-prompt="Tell me about Baron Nashor">Baron</button>
+            <button class="prompt-chip" data-prompt="What is vision control?">Vision</button>
         </div>
 
         <!-- Input bar -->
         <div class="chat-input-bar">
             <textarea
                 id="user-input"
-                placeholder="Ask about champions, roles, items, runes, ranked tips…"
+                placeholder="Ask about champions, roles, items, runes…"
                 rows="1"
                 maxlength="400"
                 aria-label="Your message"
@@ -113,11 +112,13 @@ $page_title = "Chat — League Mentor AI";
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer class="lm-footer">
     <div class="container">
-        <p>
-            &copy; <?= date('Y') ?> League Mentor AI &nbsp;|&nbsp;
-            DIT 2-7 Web Dev Final Project &nbsp;|&nbsp;
-            <a href="admin.php">Admin Panel</a>
-        </p>
+        <div class="footer-links">
+            <a href="index.php">Home</a>
+            <a href="guides.php">Guides</a>
+            <a href="chatbot.php">Chat</a>
+            <a href="credits.php">Credits</a>
+        </div>
+        <p>&copy; <?= date('Y') ?> League Mentor AI &nbsp;|&nbsp; DIT 2-7 Web Dev Final Project</p>
     </div>
 </footer>
 

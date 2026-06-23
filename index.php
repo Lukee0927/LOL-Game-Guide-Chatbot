@@ -28,7 +28,7 @@ $activePage   = 'home';
         <a class="navbar-brand" href="index.php">
             ⚔ League<span>Mentor</span> AI
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navMenu">
@@ -36,7 +36,6 @@ $activePage   = 'home';
                 <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="guides.php">Guides</a></li>
                 <li class="nav-item"><a class="nav-link" href="chatbot.php">Chat</a></li>
-                <li class="nav-item"><a class="nav-link" href="admin.php">Admin</a></li>
             </ul>
         </div>
     </div>
@@ -172,12 +171,17 @@ $activePage   = 'home';
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer class="lm-footer">
     <div class="container">
+        <div class="footer-links">
+            <a href="index.php">Home</a>
+            <a href="guides.php">Guides</a>
+            <a href="chatbot.php">Chat</a>
+            <a href="credits.php">Credits</a>
+        </div>
         <p>
             &copy; <?= date('Y') ?> League Mentor AI &nbsp;|&nbsp;
-            DIT 2-7 Web Development Final Project &nbsp;|&nbsp;
-            <a href="admin.php">Admin Panel</a>
+            DIT 2-7 Web Development Final Project
         </p>
-        <p style="margin-top:.5rem; font-size:.62rem;">
+        <p style="margin-top:.5rem; font-size:.62rem; opacity:.7;">
             League Mentor AI is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing League of Legends.
         </p>
     </div>
